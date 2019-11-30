@@ -106,9 +106,9 @@
           <div class="form">
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="" method="post" role="form" class="registerForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
+                <input type="text" name="nome" class="form-control" id="nome" placeholder="Seu nome" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
@@ -129,19 +129,19 @@
               </div>
               <div class="form-group">
                 <label>Escolha sua etinia:</label>
-                <select class="form-control">
-                  <option>Escolha</option>
-                  <option>Brancos</option>
-                  <option>Pardos</option>
-                  <option>Negros</option>
-                  <option>Amarelos</option>
-                  <option>Indígenas</option>
+                <select class="form-control" id="etinia">
+                  <option value="escolha">Escolha</option>
+                  <option value="branco">Branco</option>
+                  <option value="pardo">Pardo</option>
+                  <option value="negro">Negro</option>
+                  <option value="amarelo">Amarelo</option>
+                  <option value="indigena">Indígena</option>
                 </select>
                 <div class="validation"></div>
               </div>
               <div class="form-group">
                 <label>Escolha seu gênero:</label>
-                <select class="form-control">
+                <select class="form-control" id="genero">
                   <option>Escolha</option>
                   <option value="f">Feminino</option>
                   <option value="m">Masculino</option>
@@ -165,7 +165,7 @@
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Preencha com suas características físicas"></textarea>
+                <textarea class="form-control" id="caracteristicas" name="caracteristicas" rows="5" data-rule="required" data-msg="Por favor, preencha com suas características físicas" placeholder="Suas características físicas. Exemplo: tatuagem no pescoço, piercing no nariz, cabelo verde, anão, grávida ..."></textarea>
                 <div class="validation"></div>
               </div>
               <div class="text-center"><button type="submit">enviar</button></div>
@@ -909,7 +909,8 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/register-form.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
