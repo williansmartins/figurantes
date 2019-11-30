@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>eStartup Bootstrap Template</title>
+  <title>Figurantes</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta content="figurante procuro contrato preciso" name="keywords">
+  <meta content="Sistema para cadastro e busca de figurantes" name="description">
 
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
@@ -27,6 +27,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: eStartup
@@ -86,6 +87,80 @@
       </div>
     </div>
   </section><!-- #hero -->
+
+  <!--==========================
+  Contact Section
+  ============================-->
+  <section id="contact" class="padd-section wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Cadastro</h2>
+        <p class="separator">Preencha com seus dados para finalizar seu cadastro.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-8">
+          <div class="form">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Seu email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="senha" id="senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="idade" id="idade" placeholder="Sua idade" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <label>Escolha sua etinia:</label>
+                <select>
+                  <option>Brancos</option>
+                  <option>Pardos</option>
+                  <option>Negros</option>
+                  <option>Amarelos</option>
+                  <option>Indígenas</option>
+                </select>
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <label>Escolha seu gênero:</label>
+                <select>
+                  <option value="f">Feminino</option>
+                  <option value="m">Masculino</option>
+                </select>
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="altura" id="altura" placeholder="Sua altura" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="peso" id="peso" placeholder="Seu peso" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Preencha com suas características físicas"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center"><button type="submit">enviar</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #contact -->
 
   <!--==========================
     Get Started Section
