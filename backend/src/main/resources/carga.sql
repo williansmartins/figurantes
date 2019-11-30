@@ -1,9 +1,2 @@
-insert into imagem (url) values ('https://www.placecage.com/100/100');
-insert into imagem (url) values ('https://www.placecage.com/200/200');
-insert into imagem (url) values ('https://www.placecage.com/300/300');
-insert into imagem (url) values ('https://www.placecage.com/400/400');
-insert into imagem (url) values ('https://www.placecage.com/500/500');
-insert into imagem (url) values ('https://www.placecage.com/600/600');
-insert into imagem (url) values ('https://www.placecage.com/700/700');
-insert into imagem (url) values ('https://www.placecage.com/800/800');
-insert into imagem (url) values ('https://www.placecage.com/900/900');
+INSERT INTO `endereco` VALUES (1,'Itapevi','São Paulo'),(3,'Osasco','São Paulo');
+INSERT INTO `figurante` VALUES (2,1.78,'305.809.118-11','contato@williansmartins.com','branco','M',37,'Willians Martins',80,'secreta',1),(4,1.6,'305.809.118-11','maria@williansmartins.com','india','F',37,'Maria da Penha',65,'nova',3);
