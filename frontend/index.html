@@ -108,24 +108,29 @@
             <div id="errormessage"></div>
             <form action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Seu email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="text" name="cpf" class="form-control" id="cpf" placeholder="Seu cpf" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="senha" id="senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="idade" id="idade" placeholder="Sua idade" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="senha" id="senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="idade" id="idade" placeholder="Sua idade" data-rule="minlen:2" data-msg="Por favor, preencha com sua idade" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
                 <label>Escolha sua etinia:</label>
-                <select>
+                <select class="form-control">
+                  <option>Escolha</option>
                   <option>Brancos</option>
                   <option>Pardos</option>
                   <option>Negros</option>
@@ -136,18 +141,27 @@
               </div>
               <div class="form-group">
                 <label>Escolha seu gênero:</label>
-                <select>
+                <select class="form-control">
+                  <option>Escolha</option>
                   <option value="f">Feminino</option>
                   <option value="m">Masculino</option>
                 </select>
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="altura" id="altura" placeholder="Sua altura" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="altura" id="altura" placeholder="Sua altura" data-rule="minlen:4" data-msg="Por favor, preencha com sua altura" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="peso" id="peso" placeholder="Seu peso" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="peso" id="peso" placeholder="Seu peso" data-rule="minlen:4" data-msg="Por favor, preencha com seu peso" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Sua cidade" data-rule="minlen:4" data-msg="Por favor, preencha com sua cidade" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="estado" id="estado" placeholder="Seu estado" data-rule="minlen:4" data-msg="Por favor, preencha com seu estado" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
