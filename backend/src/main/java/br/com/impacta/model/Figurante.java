@@ -7,20 +7,32 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 public class Figurante {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+    @ApiModelProperty(notes = "O banco vai gerar o ID")
 	private Long id;
+    @ApiModelProperty(notes = "Nome do figurante", example = "Willians Martins")
 	private String nome;
+    @ApiModelProperty(example = "37")
 	private int idade;
+    @ApiModelProperty(example = "M")
 	private char genero;
+    @ApiModelProperty(example = "branco")
 	private String etinia;
+    @ApiModelProperty(example = "1.78")
 	private float altura;
+    @ApiModelProperty(example = "80.00")
 	private float peso;
+    @ApiModelProperty(example = "contato@williansmartins.com")
 	private String email;
+    @ApiModelProperty(example = "secreta")
 	private String senha;
+    @ApiModelProperty(example = "305.809.118-11")
 	private String cpf;
 
 	@OneToOne(cascade=CascadeType.ALL)
