@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MainApplication",
+            "request": "launch",
+            "mainClass": "br.com.impacta.MainApplication",
+            "projectName": "figurantes"
+        }
+    ]
+}

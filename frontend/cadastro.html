@@ -91,28 +91,28 @@
             <div id="errormessage"></div>
             <form action="" method="post" role="form" class="registerForm">
               <div class="form-group">
-                <input type="text" name="nome" class="form-control" id="nome" ng-model="nome" placeholder="Seu nome" maxlength="50" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
+                <input type="text" name="nome" class="form-control" id="nome" ng-model="model.nome" placeholder="Seu nome" maxlength="50" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" name="cpf" class="form-control" id="cpf" ng-model="cpf" placeholder="Seu cpf" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
+                <input type="text" name="cpf" class="form-control" id="cpf" ng-model="model.cpf" placeholder="Seu cpf" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" ng-model="email" placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
+                <input type="email" class="form-control" name="email" id="email" ng-model="model.email" placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="senha" id="senha" ng-model="senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
+                <input type="text" class="form-control" name="senha" id="senha" ng-model="model.senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="idade" id="idade" ng-model="idade" placeholder="Sua idade" data-rule="minlen:2" data-msg="Por favor, preencha com sua idade" />
+                <input type="text" class="form-control" name="idade" id="idade" ng-model="model.idade" placeholder="Sua idade" data-rule="minlen:2" data-msg="Por favor, preencha com sua idade" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
                 <label>Escolha sua etinia:</label>
-                <select class="form-control" id="etinia" ng-model="etinia" name="etinia">
+                <select class="form-control" id="etinia" ng-model="model.etinia" name="etinia">
                   <option value="escolha">Escolha</option>
                   <option value="branco">Branco</option>
                   <option value="pardo">Pardo</option>
@@ -124,7 +124,7 @@
               </div>
               <div class="form-group">
                 <label>Escolha seu gênero:</label>
-                <select class="form-control" id="genero" ng-model="genero" name="genero">
+                <select class="form-control" id="genero" ng-model="model.genero" name="genero">
                   <option>Escolha</option>
                   <option value="f">Feminino</option>
                   <option value="m">Masculino</option>
@@ -132,52 +132,49 @@
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="altura" id="altura" ng-model="altura" placeholder="Sua altura" data-rule="minlen:4" data-msg="Por favor, preencha com sua altura" />
+                <input type="text" class="form-control" name="altura" id="altura" ng-model="model.altura" placeholder="Sua altura" data-rule="minlen:4" data-msg="Por favor, preencha com sua altura" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="peso" id="peso" ng-model="peso" placeholder="Seu peso" data-rule="minlen:4" data-msg="Por favor, preencha com seu peso" />
+                <input type="text" class="form-control" name="peso" id="peso" ng-model="model.peso" placeholder="Seu peso" data-rule="minlen:4" data-msg="Por favor, preencha com seu peso" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="endereco.cidade" id="cidade" ng-model="cidade" placeholder="Sua cidade" data-rule="minlen:4" data-msg="Por favor, preencha com sua cidade" />
+                <input type="text" class="form-control" name="endereco.cidade" id="cidade" ng-model="model.endereco.cidade" placeholder="Sua cidade" data-rule="minlen:4" data-msg="Por favor, preencha com sua cidade" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="endereco.estado" id="estado" ng-model="estado" placeholder="Seu estado" data-rule="minlen:4" data-msg="Por favor, preencha com seu estado" />
+                <input type="text" class="form-control" name="endereco.estado" id="estado" ng-model="model.endereco.estado" placeholder="Seu estado" data-rule="minlen:4" data-msg="Por favor, preencha com seu estado" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" id="caracteristicas" ng-model="caracteristicas" name="caracteristicas" rows="5" data-rule="required" data-msg="Por favor, preencha com suas características físicas" placeholder="Suas características físicas. Exemplo: tatuagem no pescoço, piercing no nariz, cabelo verde, anão, grávida ..."></textarea>
+                <textarea class="form-control" id="caracteristicas" ng-model="model.caracteristicas" name="caracteristicas" rows="5" data-rule="required" data-msg="Por favor, preencha com suas características físicas" placeholder="Suas características físicas. Exemplo: tatuagem no pescoço, piercing no nariz, cabelo verde, anão, grávida ..."></textarea>
                 <div class="validation"></div>
               </div>
-              <div class="text-center"><button type="submit">enviar</button></div>
-              <div class="text-center"><button type="button" ng-click="salvar()">salvar</button></div>
+              <div class="text-center">
+                <button type="button" ng-click="salvar()">salvar</button>
+              </div>
             </form>
           </div>
         </div>
         <div class="col-lg-6 col-md-8">
-            <table border="4" class="table table-striped">
+            <p ng-if="figurantes==null">Não existe resultados para esta pesquisa</p>
+            <table ng-if="figurantes!=null" border="4" class="table table-striped">
                 <tr>
                     <th>id</th>
                     <th>nome</th>
                     <th>idade</th>
                     <th>ações</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>willians martins {{nome}}</td>
-                    <td>37</td>
-                    <td>editar | excluir</td>
-                </tr>
-                
-                <tr>
-                    <td>2</td>
-                    <td>nayara martins</td>
-                    <td>32</td>
-                    <td>editar | excluir</td>
-                </tr>
-                
+                <tr ng-repeat="figurante in figurantes">
+                    <td>{{figurante.id}}</td>
+                    <td>{{figurante.nome}}</td>
+                    <td>{{figurante.idade}}</td>
+                    <td>
+                        <button class="btn btn-success">editar</button> 
+                        <button class="btn btn-danger" ng-click="excluir(figurante.id)">excluir</button>
+                    </td>
+                </tr>   
             </table>            
         </div>
       </div>
