@@ -99,26 +99,48 @@ jQuery(document).ready(function($) {
       action = 'http://localhost:9090/figurantes';
     }
 
-    alert("opa, clicou em mim");
+    //alert("opa, clicou em mim");
 
-    // $.ajax({
-    //   type: "POST",
-    //   url: action,
-    //   data: str,
-    //   success: function(msg) {
-    //     // alert(msg);
-    //     if (msg == 'OK') {
-    //       $("#sendmessage").addClass("show");
-    //       $("#errormessage").removeClass("show");
-    //       $('.contactForm').find("input, textarea").val("");
-    //     } else {
-    //       $("#sendmessage").removeClass("show");
-    //       $("#errormessage").addClass("show");
-    //       $('#errormessage').html(msg);
-    //     }
+    //var data = str;
+    // var $form = $(this);
+    // var data = JSON.stringify(getFormData($form));
 
-    //   }
-    // });
+    var data = JSON.stringify({
+      "nome": $("#nome").val(),
+      "idade": $("#idade").val(),
+      "genero": $("#genero").val(),
+      "etinia": $("#etinia").val(),
+      "altura": $("#altura").val(),
+      "peso": $("#peso").val(),
+      "email": $("#email").val(),
+      "senha": $("#senha").val(),
+      "cpf": $("#cpf").val(),
+      "endereco": {
+        "cidade": $("#cidade").val(),
+        "estado": $("#estado").val()
+      }
+    });
+    
+    $.ajax({
+      type: "POST",
+      url: action,
+      dataType: 'json',
+      contentType: "application/json",
+      data: data,
+      success: function(msg) {
+        //alert(msg);
+        if (msg == 'OK') {
+          $("#sendmessage").addClass("show");
+          $("#errormessage").removeClass("show");
+          $('.contactForm').find("input, textarea").val("");
+        } else {
+          $("#sendmessage").removeClass("show");
+          $("#errormessage").addClass("show");
+          $('#errormessage').html(msg);
+        }
+
+      }
+    });
     return false;
   });
 
@@ -138,4 +160,15 @@ function popularCampos(){
   $("#cidade").val("Itapevi");
   $("#estado").val("São Paulo");
   $("#caracteristicas").val("sem tatuagem");
+}
+
+function getFormData($form){
+  var unindexed_array = $form.serializeArray();
+  var indexed_array = {};
+
+  $.map(unindexed_array, function(n, i){
+      indexed_array[n['name']] = n['value'];
+  });
+
+  return indexed_array;
 }
