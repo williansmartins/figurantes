@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="principal" ng-controller="FiguranteController">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Figurantes</title>
@@ -37,7 +37,7 @@
   ======================================================= -->
 </head>
 
-<body>
+<body ng-app="principal" >
 
   <header id="header" class="header header-hide">
     <div class="container">
@@ -71,115 +71,19 @@
     </div>
   </header><!-- #header -->
 
-  <!--==========================
-  Contact Section
-  ============================-->
   <section id="contact" class="padd-section wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
-        <h2>Cadastro</h2>
-        <p class="separator">Preencha com seus dados para finalizar seu cadastro.</p>
+        <h2>Rotas</h2>
+        <a href="#/!">Main</a>
+        <a href="#!conteudo1">conteudo 1</a>
+        <a href="#!conteudo2">conteudo 2</a>
       </div>
     </div>
+  </section>
 
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8">
-          <div class="form">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
-            <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="registerForm">
-              <div class="form-group">
-                <input type="text" name="nome" class="form-control" id="nome" ng-model="model.nome" placeholder="Seu nome" maxlength="50" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" name="cpf" class="form-control" id="cpf" ng-model="model.cpf" placeholder="Seu cpf" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" ng-model="model.email" placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="senha" id="senha" ng-model="model.senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="idade" id="idade" ng-model="model.idade" placeholder="Sua idade" data-rule="minlen:2" data-msg="Por favor, preencha com sua idade" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <label>Escolha sua etinia:</label>
-                <select class="form-control" id="etinia" ng-model="model.etinia" name="etinia">
-                  <option value="escolha">Escolha</option>
-                  <option value="branco">Branco</option>
-                  <option value="pardo">Pardo</option>
-                  <option value="negro">Negro</option>
-                  <option value="amarelo">Amarelo</option>
-                  <option value="indigena">Indígena</option>
-                </select>
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <label>Escolha seu gênero:</label>
-                <select class="form-control" id="genero" ng-model="model.genero" name="genero">
-                  <option>Escolha</option>
-                  <option value="f">Feminino</option>
-                  <option value="m">Masculino</option>
-                </select>
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="altura" id="altura" ng-model="model.altura" placeholder="Sua altura" data-rule="minlen:4" data-msg="Por favor, preencha com sua altura" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="peso" id="peso" ng-model="model.peso" placeholder="Seu peso" data-rule="minlen:4" data-msg="Por favor, preencha com seu peso" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="endereco.cidade" id="cidade" ng-model="model.endereco.cidade" placeholder="Sua cidade" data-rule="minlen:4" data-msg="Por favor, preencha com sua cidade" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="endereco.estado" id="estado" ng-model="model.endereco.estado" placeholder="Seu estado" data-rule="minlen:4" data-msg="Por favor, preencha com seu estado" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" id="caracteristicas" ng-model="model.caracteristicas" name="caracteristicas" rows="5" data-rule="required" data-msg="Por favor, preencha com suas características físicas" placeholder="Suas características físicas. Exemplo: tatuagem no pescoço, piercing no nariz, cabelo verde, anão, grávida ..."></textarea>
-                <div class="validation"></div>
-              </div>
-              <div class="text-center">
-                <button type="button" ng-click="salvar()">salvar</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-8">
-            <p ng-if="figurantes==null">Não existe resultados para esta pesquisa</p>
-            <table ng-if="figurantes!=null" border="4" class="table table-striped">
-                <tr>
-                    <th>id</th>
-                    <th>nome</th>
-                    <th>idade</th>
-                    <th>ações</th>
-                </tr>
-                <tr ng-repeat="figurante in figurantes">
-                    <td>{{figurante.id}}</td>
-                    <td>{{figurante.nome}}</td>
-                    <td>{{figurante.idade}}</td>
-                    <td>
-                        <button class="btn btn-success">editar</button> 
-                        <button class="btn btn-danger" ng-click="excluir(figurante.id)">excluir</button>
-                    </td>
-                </tr>   
-            </table>            
-        </div>
-      </div>
-    </div>
-  </section><!-- #contact -->
+  <div ng-view></div>
 
   <!--==========================
     Footer
@@ -294,16 +198,17 @@
   <!-- Contact Form JavaScript File -->
   <script src="js/contact-form.js"></script>
   <script src="js/register-form.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
-
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
+  <!-- angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+
+  <!-- angular custom -->
   <script src="js/app/app.js"></script>
-  <script src="js/app/controller.js"></script>
-  <script src="js/app/service.js"></script>
+  <script src="js/app/config.js"></script>
 
 </body>
 </html>
