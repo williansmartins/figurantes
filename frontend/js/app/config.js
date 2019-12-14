@@ -9,5 +9,8 @@ app.config(function($routeProvider) {
     .when("/conteudo2", {
         templateUrl : "views/conteudo2.html"
     })
+    .otherwise({
+        templateUrl : "views/404.html"
+    })
     
 });
