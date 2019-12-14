@@ -1,6 +1,8 @@
 package br.com.impacta.model;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,19 +12,24 @@ import io.swagger.annotations.ApiModelProperty;
 @Entity
 public class Login {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	
-	 @ApiModelProperty(notes = "O banco vai gerar o ID")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@ApiModelProperty(notes = "O banco vai gerar o ID")
 	private Long id;
+	
 	@ApiModelProperty(notes = "teste@teste.com.br") 
 	private String email;
-    @ApiModelProperty(example = "secreta")
+    
+	@ApiModelProperty(example = "secreta")
     private String senha;
-    @ApiModelProperty(notes = "Nome do figurante", example = "Willians Martins")
+    
+	@ApiModelProperty(notes = "Nome do figurante", example = "Willians Martins")
 	private String nome;
-    @ApiModelProperty(notes = "Para saber se o figurante está ativo", example = "sim/não")
+    
+	@ApiModelProperty(notes = "Para saber se o figurante está ativo", example = "sim/não")
     private boolean ativo;
-  //  @ApiModelProperty(example = "admin, cliente, figurante")
+    
+	@Enumerated(EnumType.STRING)
+    @ApiModelProperty(example = "ADMIN, CLIENTE, FIGURANTE")
     private TipoEnum tipo;
     
 	public Long getId() {
