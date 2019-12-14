@@ -625,7 +625,7 @@
   <!--==========================
   Login Section
   ============================-->
-  <section id="login" class="padd-section wow fadeInUp forms">
+  <section ng-app="principal" id="login" class="padd-section wow fadeInUp forms" ng-controller="LoginController">
 
       <div class="container">
         <div class="section-title text-center">
@@ -642,14 +642,14 @@
               <div id="errormessage"></div>
               <form action="" method="post" role="form" class="registerForm">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
+                  <input type="email" class="form-control" name="email" id="email" ng-model="model.email" placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="senha" id="senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
+                  <input type="password" class="form-control" name="senha" id="senha" ng-model="model.senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit">enviar</button></div>
+                <div class="text-center"><button type="button" ng-click="autenticar()" >enviar</button></div>
               </form>
             </div>
           </div>
@@ -835,6 +835,15 @@
   <!-- Contact Form JavaScript File -->
   <script src="js/contact-form.js"></script>
   <script src="js/register-form.js"></script>
+
+  <!-- angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+
+  <!-- Controllers e service -->
+  <script src="js/app/app.js"></script>
+  <script src="js/app/login-service.js"></script>
+  <script src="js/app/login-controller.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>

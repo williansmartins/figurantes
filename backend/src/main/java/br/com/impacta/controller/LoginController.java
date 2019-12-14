@@ -28,6 +28,14 @@ public class LoginController {
 		return repository.findAll();
 	}
 
+	@RequestMapping(value="{email}/{senha}", method = RequestMethod.GET)
+	@ResponseBody
+	@ApiModelProperty(example = "dasdas")
+	public boolean Validarlogin(@PathVariable String email, @PathVariable String senha){
+		Login loginDoBanco = repository.findByEmail(email);
+		return loginDoBanco.getSenha().equals(senha);
+	}
+
 	@RequestMapping(value="", method = RequestMethod.POST)
 	@ResponseBody
 
