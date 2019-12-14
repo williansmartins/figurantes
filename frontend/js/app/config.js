@@ -3,11 +3,11 @@ app.config(function($routeProvider) {
     .when("/", {
         templateUrl : "views/figurante-home.html"
     })
-    .when("/conteudo1", {
-        templateUrl : "views/conteudo1.html"
+    .when("/perfil", {
+        templateUrl : "views/perfil.html"
     })
-    .when("/conteudo2", {
-        templateUrl : "views/conteudo2.html"
+    .when("/propostas", {
+        templateUrl : "views/propostas.html"
     })
     .otherwise({
         templateUrl : "views/404.html"

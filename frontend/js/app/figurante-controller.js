@@ -32,6 +32,18 @@ function FiguranteController($scope, FiguranteService){
         );
     }
 
+    var buscarUm = function(){
+        FiguranteService.buscarUm(1).then(
+            function (resposta){
+                console.info( resposta.data );
+                $scope.figurante = resposta.data;
+            },
+            function (resposta){
+                console.info( resposta );
+            }
+        );
+    }
+
     var limparFormulario = function(){
         $scope.model = new Object();
     }
@@ -54,6 +66,8 @@ function FiguranteController($scope, FiguranteService){
         alert("e agora??? " + id);
     }
 
-    popularCampos();
-    buscarTodos();
+    //popularCampos();
+    //buscarTodos();
+
+    buscarUm();
 }

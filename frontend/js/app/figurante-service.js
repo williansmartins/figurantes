@@ -9,6 +9,13 @@ function FiguranteService($http){
         })
     };
 
+    FiguranteService.buscarUm = function(id) {
+        return $http({
+            method : "GET",
+            url : "http://localhost:9090/figurantes/" + id
+        })
+    };
+
     FiguranteService.inserir = function(model) {
         return $http({
             method : "POST",
