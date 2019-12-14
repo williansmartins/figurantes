@@ -20,4 +20,4 @@ INSERT INTO `figurantes`.`login`
 `senha`,
 `tipo`)
 VALUES
-(0, 'joao@teste.com', 'João Martins', 'secreta2', 'CLIENTE');
+(0, 'joao@teste.com', 'Joao Martins', 'secreta2', 'CLIENTE');

@@ -9,7 +9,11 @@ function loginController($scope, LoginService ){
         LoginService.autenticar($scope.model.email, $scope.model.senha).then(
             function(resposta){
                 console.info(resposta.data);
-                alert('Deu certo');
+                if(resposta.data == true){
+                    alert('Deu Certo');
+                }else{
+                    alert('Deu Erro');
+                }
             },
             function(resposta){
                 console.info(resposta.data);
