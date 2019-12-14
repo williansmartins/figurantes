@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/*
-  Theme Name: eStartup
-  Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -571,7 +565,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-size: 15px;
   font-weight: 300;
   margin-bottom: 30px;
-  text-transform: capitalize;
 }
 
 /* Get Started Section
@@ -1204,32 +1197,32 @@ body.mobile-nav-active #mobile-nav-toggle i {
   background: #fff;
 }
 
-#contact .info {
+.forms .info {
   color: #222;
 }
 
-#contact .info i {
+.forms .info i {
   font-size: 32px;
   color: #71c55d;
   float: left;
 }
 
-#contact .info p {
+.forms .info p {
   padding: 0 0 10px 50px;
   margin-bottom: 20px;
   line-height: 22px;
   font-size: 14px;
 }
 
-#contact .info .email p {
+.forms .info .email p {
   padding-top: 5px;
 }
 
-#contact .social-links {
+.forms .social-links {
   padding-bottom: 20px;
 }
 
-#contact .social-links a {
+.forms .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #71c55d;
@@ -1243,12 +1236,12 @@ body.mobile-nav-active #mobile-nav-toggle i {
   transition: 0.3s;
 }
 
-#contact .social-links a:hover {
+.forms .social-links a:hover {
   background: #55b03f;
   color: #fff;
 }
 
-#contact .form #sendmessage {
+.forms .form #sendmessage {
   color: #71c55d;
   border: 1px solid #71c55d;
   display: none;
@@ -1258,7 +1251,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   margin-bottom: 15px;
 }
 
-#contact .form #errormessage {
+.forms .form #errormessage {
   color: red;
   display: none;
   border: 1px solid red;
@@ -1268,11 +1261,11 @@ body.mobile-nav-active #mobile-nav-toggle i {
   margin-bottom: 15px;
 }
 
-#contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
+.forms .form #sendmessage.show, .forms .form #errormessage.show, .forms .form .show {
   display: block;
 }
 
-#contact .form .validation {
+.forms .form .validation {
   color: red;
   display: none;
   margin: 0 0 20px;
@@ -1280,7 +1273,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-size: 13px;
 }
 
-#contact .form input, #contact .form textarea {
+.forms .form input, .forms .form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -1288,7 +1281,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   line-height: 1;
 }
 
-#contact .form button {
+.forms .form button {
   background: #71c55d;
   border: 0;
   padding: 10px 24px;
@@ -1296,7 +1289,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   transition: 0.4s;
 }
 
-#contact .form button:hover {
+.forms .form button:hover {
   background: #92d283;
 }
 
