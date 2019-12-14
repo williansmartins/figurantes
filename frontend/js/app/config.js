@@ -1,7 +1,7 @@
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "views/conteudo1.html"
+        templateUrl : "views/figurante-home.html"
     })
     .when("/conteudo1", {
         templateUrl : "views/conteudo1.html"

@@ -1,3 +1,9 @@
 .hide{
 	display: none;
 }
+
+.figurante-home{
+	height: 8rem;
+    background-color: #957bbe;
+    border-radius: .25rem;
+}
