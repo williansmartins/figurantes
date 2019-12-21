@@ -11,91 +11,89 @@
   </div>
 
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-12 col-md-8">
-        <div class="form">
-          <form action="" method="post" role="form" class="registerForm">
-            <div class="form-group">
-              <input type="text" name="nome" class="form-control" id="nome" ng-model="model.nome" placeholder="Seu nome"
-                maxlength="50" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" name="cpf" class="form-control" id="cpf" ng-model="model.cpf" placeholder="Seu cpf"
-                data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" name="email" id="email" ng-model="model.email"
-                placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="senha" id="senha" ng-model="model.senha"
-                placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="idade" id="idade" ng-model="model.idade"
-                placeholder="Sua idade" data-rule="minlen:2" data-msg="Por favor, preencha com sua idade" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <label>Escolha sua etinia:</label>
-              <select class="form-control" id="etinia" ng-model="model.etinia" name="etinia">
-                <option value="escolha">Escolha</option>
-                <option value="branco">Branco</option>
-                <option value="pardo">Pardo</option>
-                <option value="negro">Negro</option>
-                <option value="amarelo">Amarelo</option>
-                <option value="indigena">Indígena</option>
-              </select>
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <label>Escolha seu gênero:</label>
-              <select class="form-control" id="genero" ng-model="model.genero" name="genero">
-                <option>Escolha</option>
-                <option value="f">Feminino</option>
-                <option value="m">Masculino</option>
-              </select>
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="altura" id="altura" ng-model="model.altura"
-                placeholder="Sua altura" data-rule="minlen:4" data-msg="Por favor, preencha com sua altura" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="peso" id="peso" ng-model="model.peso" placeholder="Seu peso"
-                data-rule="minlen:4" data-msg="Por favor, preencha com seu peso" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="endereco.cidade" id="cidade"
-                ng-model="model.endereco.cidade" placeholder="Sua cidade" data-rule="minlen:4"
-                data-msg="Por favor, preencha com sua cidade" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="endereco.estado" id="estado"
-                ng-model="model.endereco.estado" placeholder="Seu estado" data-rule="minlen:4"
-                data-msg="Por favor, preencha com seu estado" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" id="caracteristicas" ng-model="model.caracteristicas"
-                name="caracteristicas" rows="5" data-rule="required"
-                data-msg="Por favor, preencha com suas características físicas"
-                placeholder="Suas características físicas. Exemplo: tatuagem no pescoço, piercing no nariz, cabelo verde, anão, grávida ..."></textarea>
-              <div class="validation"></div>
-            </div>
-            <div class="text-center">
-              <button type="button" ng-click="salvar()">salvar</button>
-            </div>
-          </form>
+    <form action="" method="post" role="form" class="registerForm form">
+      <div class="form-row">
+
+        <div class="form-group col-md-6">
+          <input type="text" name="nome" class="form-control" id="nome" ng-model="model.nome" placeholder="Seu nome"
+          maxlength="50" data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
+          <div class="validation"></div>
+        </div>
+        
+        <div class="form-group col-md-6">
+          <input type="text" name="cpf" class="form-control" id="cpf" ng-model="model.cpf" placeholder="Seu cpf"
+            data-rule="minlen:4" data-msg="Por favor, preencha com seu nome" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="email" class="form-control" name="email" id="email" ng-model="model.email"
+            placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" name="senha" id="senha" ng-model="model.senha"
+            placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" name="idade" id="idade" ng-model="model.idade"
+            placeholder="Sua idade" data-rule="minlen:2" data-msg="Por favor, preencha com sua idade" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Escolha sua etinia:</label>
+          <select class="form-control" id="etinia" ng-model="model.etinia" name="etinia">
+            <option value="escolha">Escolha</option>
+            <option value="branco">Branco</option>
+            <option value="pardo">Pardo</option>
+            <option value="negro">Negro</option>
+            <option value="amarelo">Amarelo</option>
+            <option value="indigena">Indígena</option>
+          </select>
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Escolha seu gênero:</label>
+          <select class="form-control" id="genero" ng-model="model.genero" name="genero">
+            <option>Escolha</option>
+            <option value="f">Feminino</option>
+            <option value="m">Masculino</option>
+          </select>
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" name="altura" id="altura" ng-model="model.altura"
+            placeholder="Sua altura" data-rule="minlen:4" data-msg="Por favor, preencha com sua altura" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" name="peso" id="peso" ng-model="model.peso" placeholder="Seu peso"
+            data-rule="minlen:4" data-msg="Por favor, preencha com seu peso" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" name="endereco.cidade" id="cidade"
+            ng-model="model.endereco.cidade" placeholder="Sua cidade" data-rule="minlen:4"
+            data-msg="Por favor, preencha com sua cidade" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" name="endereco.estado" id="estado"
+            ng-model="model.endereco.estado" placeholder="Seu estado" data-rule="minlen:4"
+            data-msg="Por favor, preencha com seu estado" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group col-md-6">
+          <textarea class="form-control" id="caracteristicas" ng-model="model.caracteristicas"
+            name="caracteristicas" rows="5" data-rule="required"
+            data-msg="Por favor, preencha com suas características físicas"
+            placeholder="Suas características físicas. Exemplo: tatuagem no pescoço, piercing no nariz, cabelo verde, anão, grávida ..."></textarea>
+          <div class="validation"></div>
+        </div>
+        <div class="text-center">
+          <button type="button" ng-click="salvar()">salvar</button>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </section><!-- #contact -->
