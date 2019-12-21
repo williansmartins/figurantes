@@ -25,14 +25,18 @@ function loginController($scope, $location, LoginService ){
             }
 
         );
-      }
+    }
 
-      $scope.cadastrarUsuario = function(){
+    $scope.cadastrarUsuario = function(){
         LoginService.cadastrar($scope.model).then(
             function(resposta){
                 console.info(resposta.data);
                 if(resposta.data == true){
-                    //alert('Deu Certo');
+                    var objetoGlogal = {
+                        "flagMostrarMenu" : true
+                    }
+        
+                    $rootScope.$broadcast('topic', objetoGlogal);
                     $location.path('/perfil');
                 }else{
                     alert('Deu Erro');

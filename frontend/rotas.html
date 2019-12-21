@@ -42,12 +42,12 @@
         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
+      <nav id="nav-menu-container" ng-controller="NavegadorController" ng-show="flagMostrarMenu">
+        <ul class="nav-menu" >
           <li class="menu-active"><a href="#!perfil">Meu perfil</a></li>
           <li><a href="#!propostas">Minhas propostas</a></li>
           <li><a href="#features">Indisponibilidade</a></li>
-          <li><a href="#!login">Sair</a></li>
+          <li><a href="javascript:void(0)" ng-click="logout()">Sair</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -59,34 +59,44 @@
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/modal-video/js/modal-video.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="js/contact-form.js"></script>
-  <script src="js/register-form.js"></script>
+  <div>
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main-rotas.js"></script>
-
-  <!-- angular -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
-
-  <!-- angular custom -->
-  <script src="js/app/app.js"></script>
-  <script src="js/app/config.js"></script>
-  <script src="js/app/figurante-controller.js"></script>
-  <script src="js/app/figurante-service.js"></script>
-  <script src="js/app/login-controller.js"></script>
-  <script src="js/app/login-service.js"></script>
-
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/modal-video/js/modal-video.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="js/contact-form.js"></script>
+    <script src="js/register-form.js"></script>
+    
+    <!-- Template Main Javascript File -->
+    <script src="js/main-rotas.js"></script>
+    
+    <!-- angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.js"></script>
+    
+    
+    <!-- angular custom -->
+    <script src="js/app/app.js"></script>
+    <script src="js/app/config.js"></script>
+    
+    <script src="js/app/navegador-controller.js"></script>
+    <script src="js/app/session-service.js"></script>
+    
+    <script src="js/app/figurante-controller.js"></script>
+    <script src="js/app/figurante-service.js"></script>
+    <script src="js/app/login-controller.js"></script>
+    <script src="js/app/login-service.js"></script>
+    
+  </div>
 </body>
 </html>
+  
