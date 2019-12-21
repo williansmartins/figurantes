@@ -14,8 +14,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-5 col-md-8">
             <div class="form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
+              <div id="errormessage" ng-if="flagErro">Email ou Senha inválidos</div>
               <form action="" method="post" role="form" class="registerForm">
                 <div class="form-group">
                   <input type="email" class="form-control" name="email" id="email" ng-model="model.email" placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />

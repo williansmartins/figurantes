@@ -6,6 +6,7 @@ function loginController($scope, $location, LoginService ){
     $scope.model = new Object();
     $scope.model.email = "maria@teste.com";
     $scope.model.senha = "secreta1";
+    $scope.flagErro = false;
 
     $scope.autenticar = function(){
         LoginService.autenticar($scope.model).then(
@@ -15,7 +16,7 @@ function loginController($scope, $location, LoginService ){
                     //alert('Deu Certo');
                     $location.path('/perfil');
                 }else{
-                    alert('Deu Erro');
+                    $scope.flagErro = true;
                 }
             },
             function(resposta){

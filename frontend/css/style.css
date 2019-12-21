@@ -1253,7 +1253,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 .forms .form #errormessage {
   color: red;
-  display: none;
   border: 1px solid red;
   text-align: center;
   padding: 15px;
