@@ -1,34 +1,37 @@
-<section id="contact" class="padd-section wow fadeInUp">
+  <!--==========================
+  Login Section
+  ============================-->
+  <section id="login" class="padd-section wow fadeInUp forms" ng-controller="LoginController">
 
-  <div class="container">
-    <div class="section-title text-center">
-      <h2>Login</h2>
-      <p class="separator">Preencha com seus dados de login.</p>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-5 col-md-8">
-        <div class="form">
-          <div id="sendmessage" class="hide">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="registerForm">
-            <div class="form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" name="senha" id="senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
-              <div class="validation"></div>
-            </div>
-            <div class="text-center">
-              <button class="btn btn-success" type="submit">enviar</button>
-              <button class="btn btn-danger">voltar</button>
-            </div>
-          </form>
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>Login</h2>
+          <p class="separator">Preencha com seus dados de login.</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+  
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="registerForm">
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" ng-model="model.email" placeholder="Seu email" data-rule="email" data-msg="Por favor, preencha com um email válido" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" name="senha" id="senha" ng-model="model.senha" placeholder="Sua senha" data-rule="minlen:4" data-msg="Por favor, preencha com ao menos 4 caracteres" />
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center">
+                  <a href="javascript:void(0)" ng-click="autenticar()" >enviar</a>
+                  <a href="index.html" >voltar</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section><!-- #contact -->

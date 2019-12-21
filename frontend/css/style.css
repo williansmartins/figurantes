@@ -1281,7 +1281,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   line-height: 1;
 }
 
-.forms .form button {
+.forms .form button, .forms .form a {
   background: #71c55d;
   border: 0;
   padding: 10px 24px;
@@ -1289,7 +1289,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   transition: 0.4s;
 }
 
-.forms .form button:hover {
+.forms .form button:hover, .forms .form a:hover {
   background: #92d283;
 }
 
