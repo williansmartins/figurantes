@@ -1,4 +1,4 @@
-app.factory('ContatoService', ContatoService);
+appIndex.factory('ContatoService', ContatoService);
 
 function ContatoService($http){
     

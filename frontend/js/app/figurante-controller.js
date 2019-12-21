@@ -1,9 +1,10 @@
 app.controller('FiguranteController', FiguranteController);
 
-function FiguranteController($scope, FiguranteService){
+function FiguranteController($scope, FiguranteService, $localStorage, $rootScope){
 
     $scope.model = new Object();
     $scope.model.endereco = new Object();
+    $storage = $localStorage;
 
     function popularCampos(){
         $scope.model.nome = "Willians Martins de Morais";
@@ -23,11 +24,11 @@ function FiguranteController($scope, FiguranteService){
     var buscarTodos = function(){
         FiguranteService.buscarTodos().then(
             function (resposta){
-                console.info( resposta.data );
+                //console.info( resposta.data );
                 $scope.figurantes = resposta.data;
             },
             function (resposta){
-                console.info( resposta );
+                //console.info( resposta );
             }
         );
     }
@@ -35,11 +36,11 @@ function FiguranteController($scope, FiguranteService){
     var buscarUm = function(){
         FiguranteService.buscarUm(1).then(
             function (resposta){
-                console.info( resposta.data );
+                //console.info( resposta.data );
                 $scope.figurante = resposta.data;
             },
             function (resposta){
-                console.info( resposta );
+                //console.info( resposta );
             }
         );
     }
@@ -69,5 +70,16 @@ function FiguranteController($scope, FiguranteService){
     //popularCampos();
     //buscarTodos();
 
-    buscarUm();
+    
+    
+    var atualizarTopico = function(){
+      $rootScope.$broadcast('topic', 'objetoGlogal');
+    }
+    
+    init = function() {
+        atualizarTopico();
+        buscarUm();
+    };
+  
+    init();
 }

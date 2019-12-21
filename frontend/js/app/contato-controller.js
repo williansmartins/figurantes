@@ -1,4 +1,4 @@
-app.controller('ContatoController', ContatoController);
+appIndex.controller('ContatoController', ContatoController);
 
 function ContatoController($scope, ContatoService){
 

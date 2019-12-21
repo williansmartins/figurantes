@@ -6,18 +6,13 @@ angular.module('principal')
         $scope.flagMostrarMenu = false;
 
         $scope.logout = function(){
-        	var objetoGlogal = {
-            	"localstorage" : null,
-            	"flagMostrarMenu" : false
-            }
-
-            $rootScope.$broadcast('topic', objetoGlogal);
+            $scope.storage.flagMostrarMenu = false;
+            $rootScope.$broadcast('topic', 'objetoGlogal');
             $location.path("/login");
         }
 
         $scope.$on('topic', function (event, objetoGlogal) { 
-            $scope.storage = objetoGlogal.localstorage;
-        	$scope.flagMostrarMenu = objetoGlogal.flagMostrarMenu;
+        	$scope.flagMostrarMenu = $scope.storage.flagMostrarMenu;
         });
 
         //este apresentarMensagem eh global
@@ -26,7 +21,7 @@ angular.module('principal')
         };
 
         init = function() {
-            // console.info("NavegadorController");
+           //console.info($scope.storage);
         };
         
     	init();
