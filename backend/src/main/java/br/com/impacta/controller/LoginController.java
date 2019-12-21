@@ -1,6 +1,8 @@
 package br.com.impacta.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,16 +30,13 @@ public class LoginController {
 		return repository.findAll();
 	}
 
-	@RequestMapping(value="validar/{a}/{b}", method = RequestMethod.GET)
+	@RequestMapping(value="autenticar", method = RequestMethod.POST)
 	@ResponseBody
-	public boolean Validarlogin(@PathVariable String a, @PathVariable String b){
-		Login loginDoBanco = repository.findByEmail(a);
-
-		System.out.println(">>>>> <" + loginDoBanco);
-		System.out.println(loginDoBanco);
+	public boolean autenticar(@RequestBody Login login){
+		Login loginDoBanco = repository.findByEmail(login.getEmail());
 
 		if(null != loginDoBanco && null != loginDoBanco.getSenha()){
-			return loginDoBanco.getSenha().equals(b);
+			return loginDoBanco.getSenha().equals(login.getSenha());
 		}else{
 			return false;
 		}
@@ -45,12 +44,26 @@ public class LoginController {
 
 	@RequestMapping(value="", method = RequestMethod.POST)
 	@ResponseBody
-
-	public Login inserir(@RequestBody Login login) {
-		return repository.save(login);
+	public ResponseEntity inserir(@RequestBody Login login) {
+		try{
+			validarCampos(login);
+			repository.save(login);
+			return new ResponseEntity<>(HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+		}
 	}
 
-	@RequestMapping(value="{id}", method = RequestMethod.PUT)
+	private void validarCampos(Login login) throws Exception {
+		if(login.getEmail().isEmpty()){
+			throw new Exception("email em branco");
+		}
+		// if(login.getEmail().?????????????){
+		// 	throw new Exception("email inválido");
+		// }
+	}
+
+	@RequestMapping(value = "{id}", method = RequestMethod.PUT)
 	@ResponseBody
 	public Login atualizar(@PathVariable Long id,@RequestBody Login login) {
 		return repository.save(login);
