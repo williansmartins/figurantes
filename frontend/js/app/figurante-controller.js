@@ -66,19 +66,21 @@ function FiguranteController($scope, FiguranteService, $localStorage, $rootScope
     $scope.excluir = function(id){
         alert("e agora??? " + id);
     }
-
-    //popularCampos();
-    //buscarTodos();
-
     
+    $scope.preencherFormulario = function(entidade){
+        $scope.model = entidade;
+    }
     
     var atualizarTopico = function(){
-      $rootScope.$broadcast('topic', 'objetoGlogal');
+        $rootScope.$broadcast('topic', 'objetoGlogal');
     }
     
     init = function() {
         atualizarTopico();
-        buscarUm();
+    
+        //popularCampos();
+        // buscarUm();
+        buscarTodos();
     };
   
     init();

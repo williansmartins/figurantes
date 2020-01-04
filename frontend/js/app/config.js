@@ -9,6 +9,9 @@ app.config(function($routeProvider) {
     .when("/indisponibilidade", {
         templateUrl : "views/indisponibilidade.html"
     })
+    .when("/cadastro", {
+        templateUrl : "views/cadastro.html"
+    })
     .when("/perfil", {
         templateUrl : "views/perfil.html"
     })
