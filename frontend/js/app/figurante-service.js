@@ -24,17 +24,17 @@ function FiguranteService($http){
         })
     };
 
-    // FiguranteService.excluir = function(?????) {
-    //     return $http({
-    //         method : "DELETE",
-    //         url : "http://localhost:9090/figurantes/?????",
-    //     })
-    // };    
+    FiguranteService.excluir = function(id) {
+        return $http({
+            method : "DELETE",
+            url : "http://localhost:9090/figurantes/" + id,
+        })
+    };    
 
     FiguranteService.atualizar = function(model) {
         return $http({
             method : "PUT",
-            url : "http://localhost:9090/figurantes/?????",
+            url : "http://localhost:9090/figurantes/" + model.id,
             data: model
         })
     };    

@@ -80,8 +80,8 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-8">
-            <p ng-if="figurantes==null">Não existe resultados para esta pesquisa</p>
-            <table ng-if="figurantes!=null" border="4" class="table table-striped">
+            <p ng-if="figurantes.length == 0">Não existe resultados para serem apresentados</p>
+            <table ng-if="figurantes.length != 0" border="4" class="table table-striped">
                 <tr>
                     <th>id</th>
                     <th>nome</th>

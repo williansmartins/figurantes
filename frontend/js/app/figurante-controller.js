@@ -51,20 +51,44 @@ function FiguranteController($scope, FiguranteService, $localStorage, $rootScope
 
     $scope.salvar = function(){
 
-        FiguranteService.inserir($scope.model).then(
-            function (resposta){
-                console.info( resposta.data );
-                buscarTodos();
-                limparFormulario();
-            },
-            function (resposta){
-                console.info( resposta );
-            }
-        );
+        if($scope.model.id){
+            FiguranteService.atualizar($scope.model).then(
+                function (resposta){
+                    console.info( resposta.data );
+                    buscarTodos();
+                    limparFormulario();
+                },
+                function (resposta){
+                    console.info( resposta );
+                }
+            );
+
+        }else{            
+            FiguranteService.inserir($scope.model).then(
+                function (resposta){
+                    console.info( resposta.data );
+                    buscarTodos();
+                    limparFormulario();
+                },
+                function (resposta){
+                    console.info( resposta );
+                }
+            );
+
+        }
+
     }
 
     $scope.excluir = function(id){
-        alert("e agora??? " + id);
+        FiguranteService.excluir(id).then(
+            function (resposta){
+                alert( "Removido com sucesso!" );
+                buscarTodos();
+            },
+            function (resposta){
+                alert( "Erro ao remover!" );
+            }
+        );
     }
     
     $scope.preencherFormulario = function(entidade){
