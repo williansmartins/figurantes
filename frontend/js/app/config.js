@@ -4,7 +4,10 @@ app.config(function($routeProvider) {
         templateUrl : "views/login.html"
     })
     .when("/", {
-        templateUrl : "views/figurante-home.html"
+        templateUrl : "views/perfil.html"
+    })
+    .when("/indisponibilidade", {
+        templateUrl : "views/indisponibilidade.html"
     })
     .when("/perfil", {
         templateUrl : "views/perfil.html"
